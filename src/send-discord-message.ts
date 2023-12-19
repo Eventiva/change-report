@@ -5,7 +5,7 @@
  * File: send-discord-message.ts
  * Path: \src\send-discord-message.ts
  * Created Date: Wednesday, December 6th 2023
- * Author: Jonathan Stevens (Email: jonathan.stevens@eventiva.co.uk, Github: https://github.com/TGTGamer)
+ * Author: Jonathan Stevens (Email: jonathan@resnovas.com, Github: https://github.com/TGTGamer)
  * -----
  * Contributing: Please read through our contributing guidelines. Included are directions for opening
  * issues, coding standards, and notes on development. These can be found at https://github.com/change-report/blob/develop/CONTRIBUTING.md
@@ -13,7 +13,7 @@
  * Code of Conduct: This project abides by the Contributor Covenant, version 2.0. Please interact in ways that contribute to an open,
  * welcoming, diverse, inclusive, and healthy community. Our Code of Conduct can be found at https://github.com/change-report/blob/develop/CODE_OF_CONDUCT.md
  * -----
- * Copyright (c) 2023 Eventiva - All Rights Reserved
+ * Copyright (c) 2023 Resnovas - All Rights Reserved
  * LICENSE: Creative Commons Zero v1.0 Universal (CC0-1.0)
  * -----
  * This program has been provided under confidence of the copyright holder and is 
@@ -27,13 +27,13 @@
  * Creative Commons Zero v1.0 Universal for more details.
  * 
  * You should have received a copy of the Creative Commons Zero v1.0 Universal
- * along with this program. If not, please write to: jonathan.stevens@eventiva.co.uk,
+ * along with this program. If not, please write to: jonathan@resnovas.com,
  * or see https://creativecommons.org/publicdomain/zero/1.0/legalcode
  * 
  * DELETING THIS NOTICE AUTOMATICALLY VOIDS YOUR LICENSE - PLEASE SEE THE LICENSE FILE FOR DETAILS
  * -----
- * Last Modified: 10-12-2023
- * By: Jonathan Stevens (Email: jonathan.stevens@eventiva.co.uk, Github: https://github.com/TGTGamer)
+ * Last Modified: 19-12-2023
+ * By: Jonathan Stevens (Email: jonathan@resnovas.com, Github: https://github.com/TGTGamer)
  * Current Version: 0.0.0
  */
 
@@ -58,9 +58,16 @@ export const sendDiscordMessage = async (
     throw new Error(`Discord channel ${channel} is not text-based`)
   }
 
+  const embed = new Discord.EmbedBuilder()
+    // get the first line of the message and use it as the title
+    .setTitle(content.split('\n')[0])
+    // get the rest of the message and use it as the description
+    .setDescription(content.split('\n').slice(1).join('\n'))
+    .setAuthor({"name": "Eventiva Software Delivery Change Manager"})
+
   const message = await discordChannel.send(
     Discord.MessagePayload.create(discordChannel, {
-      content
+      embeds: [embed]
     })
   )
   
