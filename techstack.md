@@ -40,7 +40,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [Eventiva/change-report](https://github.com/Eventiva/change-report)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|20<br/>Tools used|12/27/23 <br/>Report generated|
+|21<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -169,14 +169,15 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (7)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (8)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (7)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (8)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
 |[@types/node](https://www.npmjs.com/@types/node)|v18.19.2|05/09/23|maxprilutskiy |MIT|N/A|
 |[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v5.62.0|05/09/23|maxprilutskiy |BSD-2-Clause|N/A|
+|[discord.js](https://www.npmjs.com/discord.js)|v14.14.1|05/10/23|maxprilutskiy |Apache-2.0|N/A|
 |[eslint-plugin-jest](https://www.npmjs.com/eslint-plugin-jest)|v27.6.0|05/09/23|maxprilutskiy |MIT|N/A|
 |[js-yaml](https://www.npmjs.com/js-yaml)|v3.14.1|05/09/23|maxprilutskiy |MIT|N/A|
 |[openai](https://www.npmjs.com/openai)|v3.3.0|05/09/23|maxprilutskiy |N/A|N/A|
